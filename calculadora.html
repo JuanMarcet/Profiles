@@ -6,27 +6,57 @@
     <title>Calculadora</title>
 </head>
 <body>
-<h1>lkjhg</h1>
+<style>
+    #btnLimpiar{
+        display: none;
+    }
+    .seccMult__tablaDeMultiplicar__form{
+        display: flex;
+        gap: 10px;
+    }
+
+</style>
+
+<h1>Cálculos matamáticos</h1>
     <hr>
-    <section class="seccionCalculadora">
+    <section class="seccMult">
 
-    <div class="seccionCalculadora__tablaDeMultiplicar">
+    <div class="seccMult__tablaDeMultiplicar">
+    <h2 class="seccMult__tablaDeMultiplicar__titulo" id="tituloTablas">Tablas de multiplicar </h2>
 
-    <h2 class="seccionCalculadora__tablaDeMultiplicar__titulo">Tabla de multiplicar de </h2>
-    <input type="number" id="numeroMultiplicar" required/>
-    <button id="btnMultiplicar" >X</button>
-
-
-
+    <div class="seccMult__tablaDeMultiplicar__form">
+        <input type="number" id="numeroMultiplicar" required/>
+        <button id="btnMultiplicar" >X</button>
+        <button id="btnLimpiar" onclick="limpiarResultados()">Limpiar</button>
     </div>
 
-    <div class="seccionCalculadora__resultadoMultiplicar">
+    </div>
+    <div class="seccionMultiplicar__resultadoMultiplicar">
 
-        <h3 class="seccionCalculadora__resultadoMultiplicar__titulo" id="tituloResultado">Resultado</h3>
+        <h3 class="seccionMultiplicar__resultadoMultiplicar__titulo" id="tituloResultado"></h3>
         <ul id="resultadoMultiplicar"></ul>
 
     </div>
     
+    </section>
+
+    <hr>
+    <section class="seccionCalculadora">
+        <div>
+            <input type="number" class="numeroCalculadora" required id="numero1">
+            <input type="number" class="numeroCalculadora" required id="numero2">
+            <select id="operaciones">
+                <option value="Suma">+</option>
+                <option value="Resta">-</option>
+                <option value="Multiplicación">*</option>
+                <option value="División">/</option>
+            </select>
+            <button id="btnCalcular" onclick="calculosMatematcios()">=</button>
+            <button id="btnLimpiar" >Limpiar</button>
+            <p id="resultadoOP"></p>
+            
+        </div>
+
     </section>
 
     <script src="script.js"></script>
