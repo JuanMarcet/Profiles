@@ -7,11 +7,13 @@ function tablaMultiplicar(numero) {
         console.log(`${numero} x ${i} = ${resultado}`);
     }
 }
+
 function calculosMatematcios(){
-    const numero1 = parseFloat(document.getElementById("numero1").value);
-    const numero2 = parseFloat(document.getElementById("numero2").value);
-    const OP = document.getElementById("operaciones").value;
+    const numero1 = parseFloat(document.getElementById("numero1").value); // Obtener el primer número
+    const numero2 = parseFloat(document.getElementById("numero2").value); // Obtener el segundo número
+    const OP = document.getElementById("operaciones").value; // Obtener la operación seleccionada
     let resultado;
+        // asgegurarse que los campos sean numeros
     if (isNaN(numero1) || isNaN(numero2)) {
         alert("Por favor, ingrese números válidos.");
         return;
@@ -19,12 +21,15 @@ function calculosMatematcios(){
     switch (OP) {
         case "Suma":
             resultado = numero1 + numero2;
+            signo = "+";
             break;
         case "Resta":
             resultado = numero1 - numero2;
+            signo = "-";
             break;
         case "Multiplicacion":
             resultado = numero1 * numero2;
+            signo = "*";
             break;
         case "Division":
             if (numero2 === 0) {
@@ -32,13 +37,13 @@ function calculosMatematcios(){
                 return;
             }
             resultado = numero1 / numero2;
+            signo = "/";
             break;
         default:
             alert("Operación no válida.");
             return;
     }
     document.getElementById("resultadoOP").textContent = resultado;
-
 }
 
 function limpiarResultados() {
