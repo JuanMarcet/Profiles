@@ -13,22 +13,22 @@ body {
 /*estilos de video*/
 
 .video-background video {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
+    position: absolute;
+    top: -50%; /* Mueve el video hacia arriba para mostrar solo la parte inferior */
+    left: 0;
+    width: 100%;
+    height: auto;
     min-height: 100%;
-    transform: translate(-50%, -50%);
     object-fit: cover;
-    z-index: -1; /* Muy importante */
-}
+    z-index: -1; /* Asegura que el video esté detrás de otros elementos */
+    }
 
 .video-background {
     background-attachment: fixed;
+    
 }
 
 /* Estilos para el menú de navegación */
-
 .menu-nav {
     position: fixed;
     top: 0;
@@ -36,24 +36,25 @@ body {
     width: 100%; /* Ocupa todo el ancho visible */
     z-index: 10;
     backdrop-filter: blur(10px);
+    display: flex;
 }
 
-.menu-nav::after {
+/* .menu-nav::after {
     content: "";
     position: absolute;
-    bottom: 0;      /* lo colocamos justo en la base */
+    bottom: 0;      
     left: 0;
     width: 100%;
-    height: 15px;    /* alto del borde con degradado */
+    height: 15px;   
     background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.3) 0%,   /* brillo sutil */
-    rgba(255, 255, 255, 0.15) 25%, 
-    rgba(255, 255, 255, 0.05) 60%, 
-    rgba(255, 255, 255, 0.01) 90%,
-    rgba(255, 255, 255, 0) 100%);
-    pointer-events: none; /* para no interferir con clics */
-}
+    0deg,
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0.4)
+    ),
+    linear-gradient(90.01deg, #e59cff 0.01%, #ba9cff 50.01%, #9cb2ff 100%);
+    pointer-events: none; 
+} */
+
 .menu-nav ul {
     display: flex;
     justify-content: center;
@@ -62,31 +63,85 @@ body {
     list-style-type: none;
     width: auto;
     height: 50px;
+    gap: 45px;
 }
 
 .menu-nav ul a {
-    padding: 10px 20px;
+    padding: 5px 5px;
     text-decoration: none;
     color: white;
+
 }
+
+.menu-nav ul a:hover {
+    color: #551ad4;
+    transform: translateY(0px);
+    transition: all 0.3s ease-in-out;
+}
+
 
 .Glass_effect {
     width: 30%;
     max-width: 800px;
-    margin: 20px auto;  
-    padding: 0 0;  
+    margin: 20px auto;
+    padding: 10px 20px;
     border-radius: 50px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(22, 22, 22, 0.514);
     backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(10px);    
+    -webkit-backdrop-filter: blur(15px);
+    height: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); 
+    color: white;
+
 }
 
-main { 
+
+/*estilos para el contenido*/
+main{
     color: white;
     padding-top: 100px;
+    display: flex;
+    flex-direction: row; /* ← Ahora en fila */
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 100px 50px;
+    flex-wrap: wrap; /* Por si se reduce el ancho de pantalla */
+    background-color: none;
 }
 
 .contenido {
-    min-height: 200vh; /* para poder hacer scroll y ver el efecto */
-    padding: 50px;
+    flex: 1;
+    max-width: 50%;
+    padding: 20px;
 }
+
+.skills_img {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.skills__img {
+    max-width: 100%;
+    height: auto;
+}
+
+#stars-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+
