@@ -4,29 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
+        <link rel="stylesheet" href="/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Lexend+Tera:wght@100..900&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+
 </head>
 <body>
-<h1>lkjhg</h1>
+        <header>
+            <nav class="menu-nav">
+                <div class="Glass_effect">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="calculadora.html">Projects</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+<h1>Cálculos matamáticos</h1>
     <hr>
-    <section class="seccionCalculadora">
+    <section class="seccMult">
 
-    <div class="seccionCalculadora__tablaDeMultiplicar">
+    <div class="seccMult__tablaDeMultiplicar">
+    <h2 class="seccMult__tablaDeMultiplicar__titulo contenedorTexto" id="tituloTablas">Tablas de multiplicar </h2>
 
-    <h2 class="seccionCalculadora__tablaDeMultiplicar__titulo">Tabla de multiplicar de </h2>
-    <input type="number" id="numeroMultiplicar" required/>
-    <button id="btnMultiplicar" >X</button>
-
-
-
+    <div class="seccMult__tablaDeMultiplicar__form contenedorTexto">
+        <input type="number" id="numeroMultiplicar" class="contenedorTexto" required/>
+        <button class="contenedorTexto" id="btnMultiplicar" >X</button>
+        <button class="contenedorTexto" id="btnLimpiar" onclick="limpiarResultados()">Limpiar</button>
     </div>
 
-    <div class="seccionCalculadora__resultadoMultiplicar">
+    </div>
+    <div class="seccMultiplicar__resultadoMultiplicar">
 
-        <h3 class="seccionCalculadora__resultadoMultiplicar__titulo" id="tituloResultado">Resultado</h3>
-        <ul id="resultadoMultiplicar"></ul>
+        <h3 class="seccionMultiplicar__resultadoMultiplicar__titulo contenedorTexto" id="tituloResultado"></h3>
+        <ul id="resultadoMultiplicar" class="contenedorTexto"></ul>
 
     </div>
     
+    </section>
+
+    <hr>
+    <section class="secCalculadora">
+        <div>
+            <input type="number" class="secCalculadora__numCalcular contenedorTexto" required id="numero1">
+            <input type="number" class="secCalculadora__numCalcular contenedorTexto" required id="numero2">
+            <select id="operaciones" class="contenedorTexto">
+                <option value="Suma">+</option>
+                <option value="Resta">-</option>
+                <option value="Multiplicacion">*</option>
+                <option value="Division">/</option>
+            </select>
+            <button id="btnCalcular" class="contenedorTexto" onclick="calculosMatematcios()">=</button>
+            <button id="btnLimpiar" class="contenedorTexto" >Limpiar</button>
+            <p id="resultadoOP" class="contenedorTexto"></p>
+            
+        </div>
+
     </section>
 
     <script src="script.js"></script>
