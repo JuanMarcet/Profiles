@@ -1,12 +1,18 @@
-function tablaMultiplicar(numero) {
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+async function tablaMultiplicar(numero) {
     const padre = document.getElementById("resultadoMultiplicar");
 
     for (let i = 0; i <= 12; i++) {
         const resultado = parseFloat((numero * i).toFixed(2)); // to fixed(2) para limitar a 2 decimales
         generarElementoHijo(padre, "li", `${numero} x ${i} = ${resultado}`);
         console.log(`${numero} x ${i} = ${resultado}`);
+        await sleep(200); // Esperar medio segundo entre cada iteración
     }
 }
+
 
 function calculosMatematcios(){
     const numero1 = parseFloat(document.getElementById("numero1").value); // Obtener el primer número

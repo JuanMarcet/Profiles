@@ -11,10 +11,13 @@ body {
 
 }
 .contenedorTexto{
-    color: white;
+    color: black;
+}
+.separadorInicio {
+    margin-top: 80px;
 }
 
-/*estilos de video*/
+/* ================== estilos de video ======================== */
 
 .video-background video {
     position: absolute;
@@ -104,7 +107,7 @@ body {
 }
 
 
-/*estilos para el contenido*/
+/* ============================================= estilos para el contenido =============================== */
 main{
     color: white;
     padding-top: 100px;
@@ -155,7 +158,7 @@ main{
 
 
 
-/* Estilos para la sección de multiplicar */
+/* ==================================== Estilos para la sección de multiplicar ======================================= */
 
 #btnLimpiar{
     display: none;
@@ -165,4 +168,43 @@ main{
     display: flex;
     gap: 10px;
     color: white;
+}
+
+/* Estilos para la sección de contacto */
+/* body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+*/
+.contacto {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 500px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.persona {
+    margin-bottom: 20px;
+}
+
+.persona h2 {
+    margin: 0;
+    color: #007BFF;
+}
+
+.persona a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.persona a:hover {
+    text-decoration: underline;
 }
