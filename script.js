@@ -12,6 +12,7 @@ function calculosMatematcios(){
     const numero1 = parseFloat(document.getElementById("numero1").value); // Obtener el primer número
     const numero2 = parseFloat(document.getElementById("numero2").value); // Obtener el segundo número
     const OP = document.getElementById("operaciones").value; // Obtener la operación seleccionada
+    // console.log(numero1, numero2, OP);
     let resultado;
         // asgegurarse que los campos sean numeros
     if (isNaN(numero1) || isNaN(numero2)) {
@@ -43,7 +44,7 @@ function calculosMatematcios(){
             alert("Operación no válida.");
             return;
     }
-    document.getElementById("resultadoOP").textContent = resultado;
+    document.getElementById("resultadoOP").textContent = resultado.toFixed(2); // Mostrar el resultado con 2 decimales  
 }
 
 function limpiarResultados() {
