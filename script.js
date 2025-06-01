@@ -48,6 +48,8 @@ function calculosMatematcios(){
 
 function limpiarResultados() {
     document.getElementById("resultadoMultiplicar").innerHTML = ""; // Limpiar resultados
+    document.getElementById("tituloResultado").textContent = ""; // Limpiar título del resultado
+    document.getElementById("btnLimpiar").style.display = "none"; // Ocultar el botón de limpiar
     }
 
 function generarElementoHijo(padre, elementoCrear, contenido){
