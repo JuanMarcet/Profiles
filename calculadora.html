@@ -28,46 +28,52 @@
 <div class="separadorInicio"></div>
 <h1>Cálculos matamáticos</h1>
     <hr>
-    <section class="seccMult">
+    <section class="calculosMatematicos">
+        <section class="seccMult">
 
-    <div class="seccMult__tablaDeMultiplicar">
-    <h2 class="seccMult__tablaDeMultiplicar__titulo contenedorTexto" id="tituloTablas">Tablas de multiplicar </h2>
+        <div class="seccMult__tablaDeMultiplicar">
+        <h2 class="seccMult__tablaDeMultiplicar__titulo contenedorTexto" id="tituloTablas">Tablas de multiplicar </h2>
 
-    <div class="seccMult__tablaDeMultiplicar__form contenedorTexto">
-        <input type="number" id="numeroMultiplicar" class="contenedorTexto" required/>
-        <button class="contenedorTexto" id="btnMultiplicar" >X</button>
-        <button class="contenedorTexto" id="btnLimpiar" onclick="limpiarResultados()">Limpiar</button>
-    </div>
-
-    </div>
-    <div class="seccMultiplicar__resultadoMultiplicar">
-
-        <h3 class="seccionMultiplicar__resultadoMultiplicar__titulo contenedorTexto" id="tituloResultado"></h3>
-        <ul id="resultadoMultiplicar" class="contenedorTexto"></ul>
-
-    </div>
-    
-    </section>
-
-    <hr>
-    <section class="secCalculadora">
-        <div>
-            <input type="number" class="secCalculadora__numCalcular contenedorTexto" required id="numero1">
-            <input type="number" class="secCalculadora__numCalcular contenedorTexto" required id="numero2">
-            <select id="operaciones" class="contenedorTexto">
-                <option value="Suma">+</option>
-                <option value="Resta">-</option>
-                <option value="Multiplicacion">*</option>
-                <option value="Division">/</option>
-            </select>
-            <button id="btnCalcular" class="contenedorTexto" onclick="calculosMatematcios()">=</button>
-            <button id="btnLimpiar" class="contenedorTexto" >Limpiar</button>
-            <p id="resultadoOP" class="contenedorTexto"></p>
-            
+        <div class="seccMult__tablaDeMultiplicar__form contenedorTexto">
+            <input type="number" id="numeroMultiplicar" class="contenedorTexto" required/>
+            <button class="contenedorTexto" id="btnMultiplicar" >X</button>
+            <button class="contenedorTexto" id="btnLimpiar" onclick="limpiarResultados()">Limpiar</button>
         </div>
 
-    </section>
+        </div>
+        <div class="seccMultiplicar__resultadoMultiplicar">
 
+            <h3 class="seccionMultiplicar__resultadoMultiplicar__titulo contenedorTexto" id="tituloResultado"></h3>
+            <ul id="resultadoMultiplicar" class="contenedorTexto">
+
+            </ul>
+
+        </div>
+        
+        </section>
+
+        <hr>
+        <section class="secCalculadora">
+            <div class="secCalculadora__Numeros">
+                <input type="number" class="secCalculadora__numCalcular contenedorTexto" required id="numero1">
+                <input type="number" class="secCalculadora__numCalcular contenedorTexto" required id="numero2">
+            </div>
+                <select id="operaciones" class="contenedorTexto">
+                    <option value="Suma">+</option>
+                    <option value="Resta">-</option>
+                    <option value="Multiplicacion">*</option>
+                    <option value="Division">/</option>
+                </select>
+            
+            <div class="secCalculadora__btns">
+                <button id="btnCalcular" class="contenedorTexto" onclick="calculosMatematcios()">=</button>
+                <button id="btnLimpiar" class="contenedorTexto" >Limpiar</button>
+                <p id="resultadoOP" class="contenedorTexto"></p>
+            </div>
+            
+
+        </section>
+    </section>
     <script src="script.js"></script>
 </body>
 </html>
