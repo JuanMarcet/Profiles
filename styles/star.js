@@ -70,4 +70,10 @@ function animate() {
     renderer.render(scene, camera);
 }
 
+window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    const stars = document.getElementById("stars-background");
+    stars.style.transform = `translateY(${scrollY * 0.2}px)`; // cambia 0.2 para ajustar profundidad
+});
+
 animate();

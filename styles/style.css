@@ -105,23 +105,25 @@ body {
 
 
 /*estilos para el contenido*/
-main{
+main {
     color: white;
-    padding-top: 100px;
     display: flex;
-    flex-direction: row; /* ← Ahora en fila */
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin-top: 30%;
     gap: 40px;
-    padding: 100px 50px;
-    flex-wrap: wrap; /* Por si se reduce el ancho de pantalla */
-    background-color: none;
+    padding: 100px 50px; /* Antes: 100px arriba, ahora 50px */
+    flex-wrap: wrap;
+    background-color: #030014;
+    height: auto; /* o usa min-height si quieres algo fijo */
 }
 
 .contenido {
+    display: flex;
     flex: 1;
     max-width: 50%;
-    padding: 20px;
+    z-index: 2; /* Asegura que el contenido esté por encima del fondo */
 }
 
 .skills_img {
@@ -139,13 +141,14 @@ main{
 }
 
 #stars-background {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     pointer-events: none;
     z-index: 1;
+    transform: translateZ(0); /* Mejora el rendimiento */
 }
 
 
