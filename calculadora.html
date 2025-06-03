@@ -41,7 +41,7 @@
         </div>
 
         </div>
-        <div class="seccMultiplicar__resultadoMultiplicar">
+        <div class="seccMultiplicar__resultadoMultiplicar" id="ContenedorresultadoMultiplicar">
 
             <h3 class="seccionMultiplicar__resultadoMultiplicar__titulo contenedorTexto" id="tituloResultado"></h3>
             <ul id="resultadoMultiplicar" class="contenedorTexto">
@@ -53,27 +53,41 @@
         </section>
 
         <hr>
-        <section class="secCalculadora">
-            <div class="secCalculadora__Numeros">
-                <input type="number" class="secCalculadora__numCalcular contenedorTexto" required id="numero1">
-                <input type="number" class="secCalculadora__numCalcular contenedorTexto" required id="numero2">
-            </div>
-                <select id="operaciones" class="contenedorTexto">
-                    <option value="Suma">+</option>
-                    <option value="Resta">-</option>
-                    <option value="Multiplicacion">*</option>
-                    <option value="Division">/</option>
-                </select>
-            
-            <div class="secCalculadora__btns">
-                <button id="btnCalcular" class="contenedorTexto" onclick="calculosMatematcios()">=</button>
-                <button id="btnLimpiar" class="contenedorTexto" >Limpiar</button>
-                <p id="resultadoOP" class="contenedorTexto"></p>
-            </div>
-            
+        <article class="propiedadesMataematicas">
+            <section class="secCalculadora">
+                <div class="secCalculadora__Numeros">
+                    <input type="number" class="secCalculadora__numCalcular contenedorTexto" required id="numero1">
+                    <input type="number" class="secCalculadora__numCalcular contenedorTexto" required id="numero2">
+                </div>
+                    <select id="operaciones" class="contenedorTexto">
+                        <option value="Suma">+</option>
+                        <option value="Resta">-</option>
+                        <option value="Multiplicacion">*</option>
+                        <option value="Division">/</option>
+                    </select>
+                
+                <div class="secCalculadora__btns">
+                    <button id="btnCalcular" class="contenedorTexto" onclick="calculosMatematcios()">=</button>
+                    <!-- <button id="btnLimpiar" class="contenedorTexto" >Limpiar</button> -->
+                    <p id="resultadoOP" class="contenedorTexto"></p>
+                </div>
+            </section>
+            <section class="cualidadesMatematicas">
+                <h3 class="cualidadesMatematicas__titulo contenedorTexto">Cualidades matemáticas</h3>
+                <ul id="cualidadesMatematicas__lista">
 
-        </section>
+                </ul>
+            </section>
+        </article>
     </section>
+<hr>
+
+    <script async src="https://talk.hyvor.com/embed/embed.js" type="module"></script>
+<hyvor-talk-comments
+	website-id="13380"
+	page-id=""
+></hyvor-talk-comments>
+
     <script src="script.js"></script>
 </body>
 </html>

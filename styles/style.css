@@ -168,8 +168,10 @@ main{
 /* ==================== Estilos para la sección de multiplicar ======================================= */
 .calculosMatematicos{
 display: flex;
-
-
+gap: 10px;
+height: fit-content;
+width: 100vw;
+justify-content: space-evenly;
 }
 .seccMult{
     display: flex;
@@ -188,7 +190,7 @@ display: flex;
 
 }
 .seccMultiplicar__resultadoMultiplicar{
-    /* background-color: red; */
+    display: none;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     padding: 5px;
 }
@@ -196,11 +198,22 @@ display: flex;
     display: none;
 }
 
+
 .seccMult__tablaDeMultiplicar__form{
     display: flex;
     gap: 10px;
     color: white;
 }
+
+.propiedadesMataematicas{
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    gap: 8px;
+}
+
+
 .secCalculadora{
     display: flex;
     height: 100px;
@@ -208,6 +221,9 @@ display: flex;
     align-items: center;
     gap: 20px;
     justify-content: left;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
 
 }
 
@@ -221,6 +237,22 @@ display: flex;
     
     border-top: none;
     border-left: none;
+    
+}
+.secCalculadora__btns{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.cualidadesMatematicas{
+    padding: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+}
+
+#cualidadesMatematicas__lista{
+    padding: 10px;
     
 }
 
