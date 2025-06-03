@@ -25,7 +25,7 @@ li {
 
 .video-background video {
     position: absolute;
-    top: -50%; /* Mueve el video hacia arriba para mostrar solo la parte inferior */
+    top: -55%; /* Mueve el video hacia arriba para mostrar solo la parte inferior */
     left: 0;
     width: 100%;
     height: auto;
@@ -48,6 +48,7 @@ li {
     z-index: 10;
     backdrop-filter: blur(10px);
     display: flex;
+    height: 48px;
 }
 
 /* .menu-nav::after {
@@ -73,7 +74,6 @@ li {
     align-items: center;
     list-style-type: none;
     width: auto;
-    height: 50px;
     gap: 45px;
 }
 
@@ -81,7 +81,6 @@ li {
     padding: 5px 5px;
     text-decoration: none;
     color: white;
-
 }
 
 .menu-nav ul a:hover {
@@ -90,23 +89,23 @@ li {
     transition: all 0.3s ease-in-out;
 }
 
-
 .Glass_effect {
     width: 30%;
     max-width: 800px;
-    margin: 20px auto;
+    margin: 6px auto;
     padding: 10px 20px;
     border-radius: 50px;
     background: rgba(22, 22, 22, 0.514);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-    height: 20px;
+    height: 15px;
 
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); 
     color: white;
+    font-size: 0.850rem;
 
 }
 
@@ -128,18 +127,47 @@ main{
 
 .contenido {
     display: flex;
-    flex: 1;
-    max-width: 50%;
-    z-index: 2; /* Asegura que el contenido esté por encima del fondo */
+    flex-direction: column; /* Mantiene vertical */
+    justify-content: center;
+    align-items: flex-start; /* o center si lo quieres centrado */
+    transform: translateY(-385px); /* Sube visualmente */
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    width: 100%;
+    max-width: 500px; /* Ajusta según tu diseño */
+    height: 30%;
+}
+
+.contenido h1 {
+    font-size: 2.5rem; /* Ajusta el tamaño del título */
+    margin-bottom: 20px; /* Espacio entre el título y el párrafo */
+    font-weight: 500;
+    line-height: 1;
+}
+
+.contenido p {
+    color: gray;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #800080, #00ced1, #0000ff); /* morado -> celeste -> azul */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
 }
 
 .skills_img {
     flex: 1;
-    max-width: 50%;
+    max-width: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
+    transform: translateY(-400px);
+    position: relative;
+    z-index: 2;
 }
 
 .skills__img {
@@ -151,13 +179,54 @@ main{
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     pointer-events: none;
     z-index: 1;
-    transform: translateZ(0); /* Mejora el rendimiento */
+    overflow: hidden;
 }
 
+/* ==================== Estilos para la seccion de tecnologías ========================= */
+.Technologies__container video{
+    left: 0;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Asegura que el video esté detrás de otros elementos */
+}
+
+.Technologies__container h2{
+    text-align: center;
+    font-weight: 400;
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    transform: translateY(150px);
+}
+
+.Technologies__img {
+    display: flex;
+    flex-wrap: wrap; /* Para que salte a otra línea si no caben */
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Espacio entre las imágenes */
+    z-index: 2;
+}
+
+.Technologies__img img {
+    width: auto;  
+    height: 20%;  
+    max-height: 100px; 
+    transform: translateY(-350px); /* Sube visualmente */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Animación suave */
+    cursor: pointer;
+}
+
+.Technologies__img img:hover {
+    transform: translateY(-350px) scale(1.1);
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.897));
+}
 
     /* min-height: 200vh; /* para poder hacer scroll y ver el efecto */
     /* padding: 50px;  quité esto por que ya le puse el margin superior de 50 directo al body
