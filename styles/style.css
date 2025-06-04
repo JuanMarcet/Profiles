@@ -296,6 +296,11 @@ justify-content: space-evenly;
 
 }
 
+#cualidadesMatematicas__lista li{
+    list-style-type: decimal;
+}
+
+
 .secCalculadora__Numeros{
     display: flex;
     flex-direction: column;
