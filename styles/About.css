@@ -7,26 +7,10 @@ body {
 }
 
 header {
-    background-color: #007BFF;
+    background-color: #007BFF;  
     padding: 10px 0;
 }
 
-.menu-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-}
-
-.menu-nav li {
-    margin: 0 15px;
-}
-
-.menu-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-}
 
 /* ============== Estilos para la sección About ============== */
 .tituloAbout {
