@@ -1,0 +1,168 @@
+/* ==================== Estilos Generales ==================== */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #007BFF;
+    padding: 10px 0;
+}
+
+.menu-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.menu-nav li {
+    margin: 0 15px;
+}
+
+.menu-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* ==================== Estilos para la sección de cálculos ==================== */
+.tituloPrincipal {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.calculosMatematicos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.seccMult, .propiedadesMatematicas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.seccMult {
+    margin-right: 20px; /* Espacio entre las secciones */
+}
+
+.seccMult__tablaDeMultiplicar__form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="number"], input[type="text"], select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.cualidadesMatematicas {
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-radius: 8px;
+}
+
+/* ==================== Estilos para la sección de nombres ==================== */
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.mensaje {
+    color: red;
+    margin-top: 10px;
+}
+
+#listaNombres {
+    list-style-type: none;
+    padding: 0;
+}
+
+#listaNombres li {
+    background: #e0e0e0;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ==================== Estilos para el botón flotante ==================== */
+.boton-flotante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+    background-color: #e53935;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    line-height: 55px;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 1000;
+}
+
+.boton-flotante:hover {
+    background-color: #c62828;
+    transform: scale(1.1);
+}
+
+/* ==================== Media Queries ==================== */
+@media (min-width: 768px) {
+    .calculosMatematicos {
+        flex-direction: row; /* Cambia a fila en pantallas más grandes */
+        justify-content: center; /* Espacio entre las secciones */
+        gap: 40px; /* Espacio entre las secciones */
+    }
+
+    .seccMult, .propiedadesMatematicas {
+        width: 48%; /* Ajusta el ancho para que quepan una al lado de la otra */
+    }
+}
+
+@media (max-width: 768px) {
+    .calculosMatematicos {
+        flex-direction: column; /* Cambia a columna en pantallas más pequeñas */
+    }
+
+    .seccMult, .propiedadesMatematicas {
+        width: 100%; /* Ancho completo en pantallas pequeñas */
+        margin-right: 0; /* Elimina el margen derecho */
+    }
+}

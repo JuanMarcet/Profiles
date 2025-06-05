@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
-        <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/calculadora.css">
+    <link rel="stylesheet" href="/styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -26,7 +27,7 @@
             </nav>
         </header>
 <div class="separadorInicio"></div>
-<h1>Cálculos matamáticos</h1>
+<h1 class="tituloPrincipal">Cálculos matamáticos</h1>
     <hr>
     <section class="calculosMatematicos">
         <section class="seccMult">
@@ -81,6 +82,21 @@
         </article>
     </section>
 <hr>
+<article class="cuadros">
+
+    <h3>Lista de Nombres</h3>
+
+    <div class="input-group">
+        <input type="text" id="nombreInput" placeholder="Escribe tu nombre">
+        <button id="agregarBtn" onclick="agregar()">Agregar</button>
+    </div>
+    <div class="mensaje" id="mensaje"></div>
+            <ul id="listaNombres"></ul>
+</article>
+
+<a href="video.html" class="boton-flotante" title="Ver video ">🎥</a>
+
+
 
     <script async src="https://talk.hyvor.com/embed/embed.js" type="module"></script>
 <hyvor-talk-comments

@@ -20,7 +20,12 @@ li {
 .separadorInicio {
     margin-top: 80px;
 }
-
+.tituloPrincipal{
+    text-align: center;
+    font-size: 2.5rem;
+    color: #551ad4; /* Cambia el color del texto */
+    margin-bottom: 20px; /* Espacio debajo del título */
+}
 /* ================== estilos de video ======================== */
 
 .video-background video {
@@ -233,154 +238,3 @@ main{
 } */
 
 
-
-/* ==================== Estilos para la sección de multiplicar ======================================= */
-.calculosMatematicos{
-display: flex;
-gap: 10px;
-height: fit-content;
-width: 100vw;
-justify-content: space-evenly;
-}
-.seccMult{
-    display: flex;
-    gap: 50px;  
-    width: 40%;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    padding: 5px;
-
-}
-.seccMult__tablaDeMultiplicar{
-    /* background-color: #007BFF; */
-    height: fit-content;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    padding: 5px;
-
-
-}
-.seccMultiplicar__resultadoMultiplicar{
-    display: none;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    padding: 5px;
-}
-#btnLimpiar{
-    display: none;
-}
-
-
-.seccMult__tablaDeMultiplicar__form{
-    display: flex;
-    gap: 10px;
-    color: white;
-}
-
-.propiedadesMataematicas{
-    display: flex;
-    flex-direction: row;
-    width: max-content;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    gap: 8px;
-}
-
-
-.secCalculadora{
-    display: flex;
-    height: 100px;
-    flex-direction: row;
-    align-items: center;
-    gap: 20px;
-    justify-content: left;
-    padding: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-
-
-}
-
-#cualidadesMatematicas__lista li{
-    list-style-type: decimal;
-}
-
-
-.secCalculadora__Numeros{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 50px;
-}
-.secCalculadora__Numeros input{
-    
-    border-top: none;
-    border-left: none;
-    
-}
-.secCalculadora__btns{
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-}
-
-.cualidadesMatematicas{
-    padding: 10px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
-
-}
-
-#cualidadesMatematicas__lista{
-    padding: 10px;
-    
-}
-
-
-
-/* ============== Estilos para la sección de contacto ==============*/
-/* body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    padding: 20px;
-}
-*/
-.contactos{
-    display: flex;
-    gap: 40px;
-    justify-content: left;
-    margin: 10px ; 
-    margin-left: 15% ;
-
-}
-
-.contacto {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    /* margin: 0px auto; */
-    max-width: 500px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-#contactoPersona {
-    text-align: left;
-    color: #333;
-}
-
-#rolDesarrollador{
-    text-align: right;
-    font-style: italic;
-}
-
-.persona {
-    margin-bottom: 20px;
-}
-
-#nombreContacto{
-    margin: 0;
-    color: #007BFF;
-}
-
-.persona a {
-    color: #007BFF;
-    text-decoration: none;
-}
-
-.persona a:hover {
-    text-decoration: underline;
-}

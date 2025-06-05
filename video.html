@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Video de la Tarea</title>
+<style>
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(120deg, #f0f0f0, #dbe9f4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+    }
+
+    h1 {
+    margin-bottom: 1rem;
+    color: #333;
+    }
+
+    .video-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 16 / 9;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2rem;
+    }
+
+    .video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    }
+
+    .btn-volver {
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    background-color: #1e88e5;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    }
+
+    .btn-volver:hover {
+    background-color: #1565c0;
+    }
+</style>
+</head>
+<body>
+<h1>Video de la tarea</h1>
+
+<div class="video-container">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8UOWETZzlEA?si=ZY2q_ITe6Tckloqa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>      
+</div>
+
+<a href="index.html" class="btn-volver">← Volver a la página principal</a>
+</body>
+</html>
