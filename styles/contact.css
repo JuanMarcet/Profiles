@@ -1,20 +1,25 @@
-/* ============== Estilos para la sección de contacto ==============*/
-.contactos{
-    display: flex;
-    gap: 40px;
-    justify-content: left;
-    margin: 10px ; 
-    margin-left: 15% ;
+/* ============== Estilos para la sección de contacto ============== */
+header {
+    background-color: #007BFF;
+    padding: 10px 0;
+}
 
+.contactos {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas más pequeñas */
+    flex-direction: row;
+    gap: 40px;
+    justify-content: center; /* Centra los elementos en la página */
+    margin: 10px; 
 }
 
 .contacto {
     background-color: #fff;
     border-radius: 10px;
     padding: 20px;
-    /* margin: 0px auto; */
     max-width: 500px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1 1 300px; /* Permite que los elementos crezcan y se reduzcan */
 }
 
 #contactoPersona {
@@ -22,7 +27,7 @@
     color: #333;
 }
 
-#rolDesarrollador{
+#rolDesarrollador {
     text-align: right;
     font-style: italic;
 }
@@ -31,7 +36,7 @@
     margin-bottom: 20px;
 }
 
-#nombreContacto{
+#nombreContacto {
     margin: 0;
     color: #007BFF;
 }
@@ -45,3 +50,15 @@
     text-decoration: underline;
 }
 
+/* ==================== Media Queries ==================== */
+@media (max-width: 768px) {
+    .contactos {
+        flex-direction: column; /* Cambia a columna en pantallas más pequeñas */
+        align-items: center; /* Centra los elementos */
+    }
+
+    .contacto {
+        width: 90%; /* Ancho completo en pantallas pequeñas */
+        margin: 10px 0; /* Espacio entre los elementos */
+    }
+}

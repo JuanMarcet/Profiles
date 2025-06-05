@@ -1,7 +1,7 @@
 /* ==================== Estilos Generales ==================== */
 body {
     font-family: 'Poppins', sans-serif;
-    margin: 0;
+    margin: 0px;
     padding: 0;
     background-color: #f4f4f4;
 }
@@ -9,23 +9,6 @@ body {
 header {
     background-color: #007BFF;
     padding: 10px 0;
-}
-
-.menu-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-}
-
-.menu-nav li {
-    margin: 0 15px;
-}
-
-.menu-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
 }
 
 /* ==================== Estilos para la sección de cálculos ==================== */
@@ -41,7 +24,13 @@ header {
     gap: 20px;
     padding: 20px;
 }
+#cualidadesMatematicas__lista{
+    padding-left: 20px;
+}
 
+#cualidadesMatematicas__lista li{
+    list-style-type: decimal;
+}
 .seccMult, .propiedadesMatematicas {
     display: flex;
     flex-direction: column;
@@ -80,6 +69,9 @@ button {
     cursor: pointer;
     transition: background-color 0.3s;
 }
+#btnLimpiar{
+    display: none;
+}
 
 button:hover {
     background-color: #45a049;
@@ -117,6 +109,11 @@ button:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.contenedorBotones {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
 }
 
 /* ==================== Estilos para el botón flotante ==================== */

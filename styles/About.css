@@ -1,0 +1,88 @@
+/* ============== Estilos Generales ============== */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #007BFF;
+    padding: 10px 0;
+}
+
+.menu-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.menu-nav li {
+    margin: 0 15px;
+}
+
+.menu-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* ============== Estilos para la sección About ============== */
+.tituloAbout {
+    text-align: center;
+    margin: 20px 0;
+    color: #333;
+}
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas más pequeñas */
+    justify-content: center; /* Centra los elementos */
+    gap: 20px; /* Espacio entre las tarjetas */
+    padding: 20px;
+}
+
+.persona {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 300px; /* Ancho máximo de cada tarjeta */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centra el texto */
+}
+
+.fotoPersona {
+    width: 100%; /* Imagen ocupa todo el ancho de la tarjeta */
+    border-radius: 10px; /* Bordes redondeados para la imagen */
+}
+
+.persona h2 {
+    color: #007BFF; /* Color del nombre */
+    margin: 10px 0 5px; /* Margen para el nombre */
+}
+
+.persona p {
+    margin: 5px 0; /* Margen para los párrafos */
+}
+
+.persona a {
+    color: #007BFF; /* Color del enlace */
+    text-decoration: none; /* Sin subrayado */
+}
+
+.persona a:hover {
+    text-decoration: underline; /* Subrayado al pasar el ratón */
+}
+
+/* ==================== Media Queries ==================== */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Cambia a columna en pantallas más pequeñas */
+        align-items: center; /* Centra los elementos */
+    }
+
+    .persona {
+        width: 90%; /* Ancho completo en pantallas pequeñas */
+    }
+}
