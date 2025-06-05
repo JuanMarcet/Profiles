@@ -187,13 +187,17 @@ main{
 }
 
 /* ==================== Estilos para la seccion de tecnologías ========================= */
+.Technologies {
+    transform: translateY(-270px); /* Sube visualmente */
+}
+
 .Technologies__container video{
-    left: 0;
-    width: 100%;
-    height: auto;
-    min-height: 100%;
-    object-fit: cover;
-    z-index: -1; /* Asegura que el video esté detrás de otros elementos */
+        left: 0;
+        width: 100%;
+        height: auto;
+        min-height: 100%;
+        object-fit: cover;
+        z-index: -1; /* Asegura que el video esté detrás de otros elementos */
 }
 
 .Technologies__container h2{
@@ -228,11 +232,127 @@ main{
     filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.897));
 }
 
+.Performance h2 {
+    display: flex;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.Performance__gradient {
+    background: linear-gradient(90deg, #00ced1, #0000ff); /* celeste -> azul */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.Performance video {
+    left: 0;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Asegura que el video esté detrás de otros elementos */
+    translate: 0 -100px; /* Sube el video */
+    position: relative; /* Asegura que el video esté en el flujo del documento */
+
+}
+
+
+/* ==================== Estilos para la sección de projectos ========================= */
+.Projects h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    font-size: 2.5rem;
+}
+
+.Projects__titulo {
+    background: linear-gradient(90deg, #be63be, #4c9b9c, #13a4a7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    font-weight: 500; /* opcional para mayor impacto visual */
+}
+
+
     /* min-height: 200vh; /* para poder hacer scroll y ver el efecto */
     /* padding: 50px;  quité esto por que ya le puse el margin superior de 50 directo al body
 } */
 
+/* ===========================Estilos para el Footer============================*/
+.footer {
+    display: flex;
+    justify-content: center; /* centra el contenedor interno */
+    background-color: #030014;
+    padding: 2rem;
+    color: rgb(224, 216, 216);
+    font-size: 0.875rem;
+}
 
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    gap: 2rem;
+    width: 80%;
+    max-width: 1200px;
+    flex-wrap: wrap; /* permite que se acomode en pantallas pequeñas */
+}
+
+.footer__col {
+    flex: 1;
+    margin: 0 1rem;
+    min-width: 200px; /* para mantener la forma en pantallas pequeñas */
+}
+
+.footer__col ul li a {
+    text-decoration: none; /* quita el subrayado */
+    color: rgb(185, 182, 182); /* opcional: color del texto */
+    font-weight: 2rem;
+}
+
+.footer__social {
+    padding:0;
+    margin: 0;
+}
+
+.footer__social li {
+    list-style: none;
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+}
+
+.footer__social li a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem; /* espacio entre el ícono y el texto */
+    text-decoration: none;
+    color: white; /* o el color que uses en el footer */
+    font-size: 1rem;
+}
+
+.footer__social li img {
+    width: auto;  /* ajusta según el tamaño que necesites */
+    height: 19px;
+}
+
+
+/* Opcional: diseño responsivo para móviles */
+@media (max-width: 768px) {
+    .footer__container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer__col {
+        margin: 1rem 0;
+    }
+}
 
 /* ==================== Estilos para la sección de multiplicar ======================================= */
 .calculosMatematicos{
@@ -295,11 +415,6 @@ justify-content: space-evenly;
 
 
 }
-
-#cualidadesMatematicas__lista li{
-    list-style-type: decimal;
-}
-
 
 .secCalculadora__Numeros{
     display: flex;
